@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.CheckBox?>
+<AnchorPane
+        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+        prefHeight="340" prefWidth="509"
+        xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.pack.app.Controller2">
+    <children>
+        <Button mnemonicParsing="false" onAction="#handleButton_ok" layoutX="278" layoutY="275" prefHeight="37" prefWidth="102" text="OK"/>
+        <Button mnemonicParsing="false" onAction="#handleButton_cancel" layoutX="394" layoutY="275" prefHeight="37" prefWidth="100" text="Cancel"/>
+        <TextArea layoutX="15" layoutY="55" prefHeight="140" prefWidth="479" text="hello\n\nthis is a text!!"/>
+        <TextField layoutX="187" layoutY="213" prefHeight="34" prefWidth="307" text=""/>
+        <Label layoutX="15" layoutY="213" prefHeight="35" prefWidth="156" text="current label :"/>
+        <Label layoutX="15" layoutY="15" prefHeight="31" prefWidth="479" text="some kind of introductory text for the first line :"/>
+        <CheckBox layoutX="15" layoutY="272" prefHeight="33" prefWidth="75" text="check me"/>
+        <CheckBox layoutX="110" layoutY="272" prefHeight="33" prefWidth="75" text="check 2"/>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="492.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alv.alframe.Controller">
+   <children>
+      <SplitPane dividerPositions="0.6766917293233082" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Pane fx:id="pane" prefHeight="416.0" prefWidth="608.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="rightpane" minHeight="0.0" minWidth="0.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <SplitPane dividerPositions="0.23565573770491804" layoutY="129.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="160.0">
+                           <children>
+                              <ComboBox fx:id="comboProjects" layoutX="10.0" layoutY="2.0" prefWidth="214.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                              <HBox layoutX="10.0" layoutY="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0">
+                                 <children>
+                                    <Label prefHeight="30.0" prefWidth="77.0" text="Name" />
+                                    <TextField fx:id="txtProj" prefHeight="30.0">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin></TextField>
+                                    <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveProject" prefHeight="30.0" prefWidth="82.0" text="Save">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin></Button>
+                                    <Button fx:id="btnDelProj" mnemonicParsing="false" onAction="#deleteProject" prefHeight="30.0" prefWidth="78.0" text="Del" />
+                                 </children>
+                              </HBox>
+                              <ComboBox fx:id="comboLang" layoutX="10.0" layoutY="65.0" prefHeight="30.0" prefWidth="144.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="75.0">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                          <String fx:value="java swing" />
+                                          <String fx:value="javafx" />
+                                      </FXCollections>
+                                  </items>
+                              </ComboBox>
+                              <Button fx:id="btnMake" layoutX="155.0" layoutY="68.0" mnemonicParsing="false" onAction="#makeProject" prefHeight="30.0" prefWidth="82.0" text="Make" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="75.0" />
+                           </children></AnchorPane>
+                        <ScrollPane fitToHeight="true" fitToWidth="true">
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <HBox prefHeight="31.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#createElement" prefHeight="30.0" text="add" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="btnDel" disable="true" mnemonicParsing="false" onAction="#deleteElement" prefHeight="30.0" text="remove" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="btnDup" disable="true" mnemonicParsing="false" onAction="#duplicateElement" prefHeight="31.0" text="duplicate" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                     <HBox>
+                                         <children>
+                                             <Label maxWidth="80.0" prefWidth="80.0" text="id" />
+                                             <TextField fx:id="txtId" disable="true" HBox.hgrow="ALWAYS">
+                                                 <HBox.margin>
+                                                     <Insets left="10.0" right="5.0" />
+                                                 </HBox.margin>
+                                             </TextField>
+                                         </children>
+                                         <VBox.margin>
+                                             <Insets left="5.0" top="5.0" />
+                                         </VBox.margin>
+                                     </HBox>
+                                     <HBox layoutX="15.0" layoutY="87.0">
+                                         <children>
+                                             <Label maxWidth="80.0" prefWidth="80.0" text="type" />
+                                             <ComboBox fx:id="propType" prefWidth="142.0" promptText="Item Type" HBox.hgrow="ALWAYS">
+                                                 <HBox.margin>
+                                                         <Insets left="10.0" right="5.0" />
+                                                 </HBox.margin>
+                                                 <items>
+                                                     <FXCollections fx:factory="observableArrayList">
+                                                         <String fx:value="Button" />
+                                                         <String fx:value="Check Box" />
+                                                         <String fx:value="Drop Down Menu" />
+                                                         <String fx:value="Label" />
+                                                         <String fx:value="Text Area" />
+                                                         <String fx:value="Text Field" />
+                                                     </FXCollections>
+                                                 </items>
+                                             </ComboBox>
+                                         </children>
+                                         <VBox.margin>
+                                             <Insets left="5.0" top="5.0" />
+                                         </VBox.margin>
+                                     </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label maxWidth="80.0" prefWidth="80.0" text="name" />
+                                          <TextField fx:id="propName" onKeyReleased="#nameAction" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="15.0">
+                                       <children>
+                                          <Label maxWidth="80.0" prefWidth="80.0" text="text" />
+                                          <TextField fx:id="propText" onKeyReleased="#textAction" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="15.0" layoutY="111.0">
+                                       <children>
+                                          <Label maxWidth="80.0" prefWidth="80.0" text="left" />
+                                          <TextField fx:id="propX" onKeyReleased="#onKeyX" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="136.0">
+                                       <children>
+                                          <Label maxWidth="80.0" prefWidth="80.0" text="top" />
+                                          <TextField fx:id="propY" onKeyReleased="#onKeyY" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="161.0">
+                                       <children>
+                                          <Label maxWidth="80.0" prefWidth="80.0" text="width" />
+                                          <TextField fx:id="propWidth" onKeyReleased="#onKeyW" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="186.0">
+                                       <children>
+                                          <Label maxWidth="80.0" prefWidth="80.0" text="height" />
+                                          <TextField fx:id="propHeight" onKeyReleased="#onKeyH" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="15.0" layoutY="225.0">
+                                       <children>
+                                          <Label maxWidth="80.0" prefWidth="80.0" text="right" />
+                                          <TextField fx:id="propRight" onKeyReleased="#onKeyR" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="250.0">
+                                       <children>
+                                          <Label maxWidth="80.0" prefWidth="80.0" text="bottom" />
+                                          <TextField fx:id="propBottom" onKeyReleased="#onKeyB" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
