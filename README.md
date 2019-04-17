@@ -6,4 +6,10 @@ The purpose is to handle automatically :
 * boiler plate code to create the matching UI app in a variety of programming languages
 * underlying threading code for long-running tasks (UI usually trig actions which can be time consuming)
 
-![]{images/ALFrame_1.png}
+THIS IS A WORK IN "VERY SLOW" PROGRESS
+
+![](images/ALFrame_1.png)
+
+![](images/ALFrame_2.png)
+
+![](images/ALFrame_3.png)
